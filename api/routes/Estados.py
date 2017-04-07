@@ -1,9 +1,12 @@
 import json
 from tornado.web import RequestHandler
+from tornado.gen import coroutine
+
 
 class EstadosHandler(RequestHandler):
 
     # GET /estados
+    @coroutine
     def get(self):
 
         estados = [
@@ -26,4 +29,5 @@ class EstadosHandler(RequestHandler):
         self.set_header("Access-Control-Allow-Origin", "*")
         self.set_status(200, "Ok")
         self.write(response)
+		
         return

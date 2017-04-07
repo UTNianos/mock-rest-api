@@ -1,11 +1,12 @@
 import json
-import uuid
 from tornado.web import RequestHandler
 from tornado.gen import coroutine
 
 
 class MateriasHandler(RequestHandler):
-    # GET /materias
+    
+	# GET /materias
+    @coroutine
     def get(self):
         materias = [{
             "a": "0",
