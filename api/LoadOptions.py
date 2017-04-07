@@ -4,6 +4,7 @@ def load_options(config_file):
 
     # General application settings
     define('port', type=int, group='application', help='Port to run the application from.')
+    define('autoreload', type=bool, group='application', help='Autoreload when code changes.')
     define('compress_response', type=bool, group='application', help='Whether or not to compress the response.')
 
     # Security options
